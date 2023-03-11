@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Digit /> renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "borderRadius": 5,
+        "height": 10,
+        "width": 10,
+      },
+      {
+        "backgroundColor": "#949BC3",
+      },
+    ]
+  }
+  testID="digit-component"
+/>
+`;
