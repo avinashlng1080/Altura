@@ -1,3 +1,3 @@
 # Init
 
-A single starting place for our app. This is where we will initialize our app, and where we will load any data that we need to load before the app is ready to be used.
+Our app should be translatable into any language. We use [i18next](http://i18next.com/) for this.

@@ -1,3 +1,4 @@
-# i18n
+# Init
 
-Our app should be translatable into any language. We use [i18next](http://i18next.com/) for this.
+A single place to initialize the whole app.
+From here, we can decide what needs to be retrieved, initialized, etc. for the proper loading/working of the app.
