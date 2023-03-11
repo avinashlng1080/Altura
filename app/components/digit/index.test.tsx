@@ -3,7 +3,6 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import Digit from './';
-// expect.extend({toHaveStyle});
 describe('<Digit />', () => {
   test('should render a <View /> component', () => {
     const {getByTestId} = render(<Digit isSelected={false} />);
