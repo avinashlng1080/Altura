@@ -1,13 +1,23 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 
-import {ALTURA_BORDER, ALTURA_SHADE} from '../../constants/colors';
+import {
+  ALTURA_BORDER,
+  ALTURA_SHADE,
+  ALTURA_WHITE,
+} from '../../constants/colors';
+
+const SIZE = 35;
 
 const styles = StyleSheet.create({
   container: {
-    width: 10,
-    height: 10,
-    borderRadius: 5,
+    width: SIZE,
+    height: SIZE,
+    borderRadius: SIZE / 2,
+  },
+  isSelected: {
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: ALTURA_BORDER,
   },
 });
 
@@ -20,9 +30,8 @@ const Digit = ({isSelected}: Props) => {
       testID="digit-component"
       style={[
         styles.container,
-        {
-          backgroundColor: isSelected ? ALTURA_SHADE : ALTURA_BORDER,
-        },
+        {backgroundColor: !isSelected ? ALTURA_SHADE : ALTURA_WHITE},
+        isSelected && styles.isSelected,
       ]}
     />
   );

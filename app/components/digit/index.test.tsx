@@ -12,7 +12,7 @@ describe('<Digit />', () => {
     expect(digitComponent.type).toEqual('View');
   });
 
-  test('renders correctly', () => {
+  test('Digit renders correctly', () => {
     const tree = renderer.create(<Digit isSelected={true} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
