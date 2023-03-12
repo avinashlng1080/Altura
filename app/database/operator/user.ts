@@ -1,12 +1,10 @@
-import CryptoJS from 'react-native-crypto-js';
-
 import UserModel from '../../../types/models/user';
 import {WDB_TBL_USER} from '../../constants/table';
 import DatabaseManager from '../../database/manager';
 export const createUser = async (pin: string, name?: string) => {
   try {
     const database = DatabaseManager.database;
-    debugger;
+    //todo: the pin should be encr
     const cryptoPin = pin; //  CryptoJS.SHA256(pin).toString();
     let user;
     if (database) {
@@ -17,7 +15,6 @@ export const createUser = async (pin: string, name?: string) => {
         });
       });
     }
-    console.log('>>>  created !!', {user});
     return user;
   } catch (e) {
     console.error('An error occurred while creating a user', e);
