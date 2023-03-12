@@ -38,7 +38,9 @@ const Launch = () => {
 
   useEffect(() => {
     if (pin.length > 5) {
-      //todo Store PIN locally in database and ensure the stacks auto-switch to Home screen
+      //todo
+      // 1. create a database to store the PIN
+      // 2. Store PIN locally in database and ensure the stacks auto-switch to Home screen
     }
   }, [pin]);
 

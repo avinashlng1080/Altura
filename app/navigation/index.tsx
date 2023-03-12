@@ -26,6 +26,9 @@ const HomeRoute = () => {
 
 const isSignIn = () => {
   //todo: check if user is signed in - read from database
+  // 1. check if user is signed in by querying the database
+  // 2. if user is signed in, return true
+
   return false;
 };
 export const Routes = () => {
