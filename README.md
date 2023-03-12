@@ -12,3 +12,5 @@ An app that allows you to view your ETH balance using 12 word recovery seed
 4. Implement CodePush to allow for faster production hotfixes
 5. Implement Sentry for catching errors in Beta and Production environments
 6. Store the database at a more secure custom location.  Over there, we can further encrypt its contents.
+7. We can emulate multiple user accounts by having multiple user records with different PINs.  Then, we'll need to  
+   track down the user record with the latest time stamp.
