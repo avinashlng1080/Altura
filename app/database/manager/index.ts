@@ -9,7 +9,9 @@ import schema from '../schema';
 class DatabaseManager {
   public database?: Database;
 
-  constructor() {
+  constructor() {}
+
+  init() {
     this.createDatabase();
   }
 
@@ -28,12 +30,14 @@ class DatabaseManager {
     });
 
     // Then, make a Watermelon database from it!
-    this.database = new Database({
+    const db = new Database({
       adapter,
       modelClasses: [User, Account],
     });
 
-    return this.database;
+    if (db) {
+      this.database = db;
+    }
   }
 }
 
