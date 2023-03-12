@@ -7,6 +7,7 @@ import Container from './app/components/container';
 import {ALTURA_PURPLE} from './app/constants/colors';
 import {LAUNCH, MAIN} from './app/constants/screens';
 import DatabaseManager from './app/database/manager';
+import {subscribeUser} from './app/database/subscription/user';
 import {HomeRoute} from './app/navigation';
 import {queryUser} from './app/queries/user';
 import Launch from './app/screens/launch';
@@ -27,14 +28,14 @@ export const App = () => {
   const [querying, setIsQuerying] = useState<boolean>(true);
 
   useEffect(() => {
-    const checkIfUserSignedIn = async () => {
-      const user = await queryUser();
-      console.log('>>>  user', {user});
-
-      setIsLoggedIn(Boolean(user));
+    const userSubscription = subscribeUser(users => {
+      console.log('>>>  users', {users});
+      setIsLoggedIn(Boolean(users[0]));
       setIsQuerying(false);
+    });
+    return () => {
+      userSubscription?.unsubscribe();
     };
-    checkIfUserSignedIn();
   }, []);
 
   if (querying) {
