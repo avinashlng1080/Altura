@@ -9,7 +9,7 @@ const schema = appSchema({
       name: WDB_TBL_USER,
       columns: [
         {name: 'name', type: 'string', isOptional: true},
-        {name: 'pin', type: 'string'},
+        {name: 'is_logged_in', type: 'boolean'},
       ],
     }),
     tableSchema({
