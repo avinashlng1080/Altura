@@ -6,9 +6,9 @@ import {WDB_TBL_USER} from '../../../constants/table';
 export default class User extends Model implements UserInterface {
   static table = WDB_TBL_USER;
 
-  @text('name') name: string = '';
+  @text('name') name!: string;
 
-  @text('pin') pin: string = '';
+  @text('pin') pin!: string;
 
   @writer async setPin(hashPin: string) {
     await this.update(u => {

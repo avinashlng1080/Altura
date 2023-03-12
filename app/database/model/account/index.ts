@@ -5,9 +5,9 @@ import AccountInterface from '../../../../types/models/account';
 import {WDB_TBL_ACCOUNT} from '../../../constants/table';
 export default class Account extends Model implements AccountInterface {
   static table = WDB_TBL_ACCOUNT;
-  @text('balance') balance: string = '';
+  @text('balance') balance!: string;
 
-  @text('crypto_type') cryptoType: string = '';
+  @text('crypto_type') cryptoType!: string;
 
   @writer async setBalance(bal: string) {
     await this.update(acc => {
