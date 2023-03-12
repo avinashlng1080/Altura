@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import * as React from 'react';
 
 import {ALTURA_PURPLE} from '../constants/colors';
+import {HOME, LAUNCH, MAIN, SETTINGS} from '../constants/screens';
 import Home from '../screens/home';
 import Launch from '../screens/launch';
 import Settings from '../screens/settings';
@@ -13,14 +14,18 @@ const Stack = createNativeStackNavigator();
 const HomeRoute = () => {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Settings" component={Settings} />
+      <Tab.Screen name={HOME} component={Home} options={{headerShown: false}} />
+      <Tab.Screen
+        name={SETTINGS}
+        component={Settings}
+        options={{headerShown: false}}
+      />
     </Tab.Navigator>
   );
 };
 
 const isSignIn = () => {
-  //todo: check if user is signed in
+  //todo: check if user is signed in - read from database
   return false;
 };
 export const Routes = () => {
@@ -29,11 +34,15 @@ export const Routes = () => {
     <NavigationContainer>
       <Stack.Navigator>
         {isUserSignedIn ? (
-          <Stack.Screen name="Home" component={HomeRoute} />
+          <Stack.Screen
+            component={HomeRoute}
+            name={MAIN}
+            options={{headerShown: false}}
+          />
         ) : (
           <Stack.Screen
-            name="Launch"
             component={Launch}
+            name={LAUNCH}
             options={{
               title: 'Create a PIN',
               headerStyle: {
