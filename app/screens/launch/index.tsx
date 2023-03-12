@@ -4,6 +4,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import Container from '../../components/container';
 import Digits from '../../components/digits';
 import NumberPad from '../../components/number_pad';
+import {createUser} from '../../database/operator/user';
 
 const styles = StyleSheet.create({
   container: {
@@ -38,7 +39,11 @@ const Launch = () => {
 
   useEffect(() => {
     if (pin.length > 5) {
-      //todo Store PIN locally in database and ensure the stacks auto-switch to Home screen
+      //todo
+      // 2. Store PIN locally in database and ensure the stacks auto-switch to Home screen
+      // 3. Add a comment to show how to view the database's content -https://github.com/Nozbe/WatermelonDB/issues/710#issuecomment-776255654
+
+      createUser(pin);
     }
   }, [pin]);
 
