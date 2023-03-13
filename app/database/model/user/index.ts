@@ -1,5 +1,5 @@
 import {Model} from '@nozbe/watermelondb';
-import {text, writer} from '@nozbe/watermelondb/decorators';
+import {field, text, writer} from '@nozbe/watermelondb/decorators';
 
 import UserInterface from '../../../../types/models/user';
 import {WDB_TBL_USER} from '../../../constants/table';
@@ -8,11 +8,11 @@ export default class User extends Model implements UserInterface {
 
   @text('name') name!: string;
 
-  @text('pin') pin!: string;
+  @field('is_logged_in') isLoggedIn!: boolean;
 
-  @writer async setPin(hashPin: string) {
+  @writer async setIsLoggedIn(isLoggedIn: boolean) {
     await this.update(u => {
-      u.pin = hashPin;
+      u.isLoggedIn = isLoggedIn;
     });
   }
 

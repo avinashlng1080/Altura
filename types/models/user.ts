@@ -6,9 +6,9 @@ declare class UserModel extends Model {
 
   name: string;
 
-  pin: string;
+  isLoggedIn: boolean;
 
-  setPin(bal: string): Promise<void>;
+  setIsLoggedIn(isLoggedIn: boolean): Promise<void>;
 
   setName(type: string): Promise<void>;
 }

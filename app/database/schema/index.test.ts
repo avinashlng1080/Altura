@@ -12,11 +12,11 @@ describe('*** Test schema for APP database ***', () => {
           unsafeSql: undefined,
           columns: {
             name: {name: 'name', type: 'string', isOptional: true},
-            pin: {name: 'pin', type: 'string'},
+            pin: {name: 'is_logged_in', type: 'boolean'},
           },
           columnArray: [
             {name: 'name', type: 'string', isOptional: true},
-            {name: 'pin', type: 'string'},
+            {name: 'is_logged_in', type: 'boolean'},
           ],
         },
         [WDB_TBL_ACCOUNT]: {
