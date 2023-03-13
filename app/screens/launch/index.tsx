@@ -6,6 +6,7 @@ import {createUser} from '../../actions/user';
 import Container from '../../components/container';
 import Digits from '../../components/digits';
 import NumberPad from '../../components/number_pad';
+import {storePin} from '../../utils/keychain';
 
 const styles = StyleSheet.create({
   container: {
@@ -43,7 +44,7 @@ const Launch = () => {
   useEffect(() => {
     if (pin.length > 5 && !isJailBroken) {
       createUser(true);
-      //todo: store PIN in keychain
+      storePin(pin);
     }
   }, [pin, isJailBroken]);
 
