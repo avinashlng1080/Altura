@@ -1,6 +1,3 @@
-// 
-
-
 Securing a React Native application involves a variety of techniques and practices that should be implemented throughout the entire development lifecycle. Here are some general tips to secure your React Native application:
 
     Secure Data Storage: Ensure that sensitive data such as login credentials, user data, and tokens are encrypted and stored securely. Use secure storage methods such as keychain on iOS and Keystore on Android.
