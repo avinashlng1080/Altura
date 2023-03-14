@@ -24,6 +24,7 @@
     "ethers": "^6.1.0",
     "ethjs-provider-http": "^0.1.6",
     "ethjs-query": "^0.3.8",
+    "hdkey": "^2.1.0",
     "jail-monkey": "^2.8.0",
     "node-libs-react-native": "^1.2.1",
     "react": "18.2.0",
