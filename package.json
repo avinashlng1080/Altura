@@ -11,17 +11,29 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "@ethersproject/shims": "^5.7.0",
     "@nozbe/watermelondb": "^0.25.5",
     "@react-native-community/netinfo": "^9.3.7",
     "@react-navigation/bottom-tabs": "^6.5.7",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
+    "base64-js": "^1.5.1",
+    "bip39": "^3.1.0",
+    "ethereumjs-util": "^7.1.5",
+    "ethereumjs-wallet": "^1.0.2",
+    "ethers": "^6.1.0",
+    "ethjs-provider-http": "^0.1.6",
+    "ethjs-query": "^0.3.8",
+    "hdkey": "^2.1.0",
     "jail-monkey": "^2.8.0",
+    "node-libs-react-native": "^1.2.1",
     "react": "18.2.0",
     "react-native": "0.71.4",
+    "react-native-get-random-values": "^1.8.0",
     "react-native-keychain": "^8.1.1",
     "react-native-safe-area-context": "^4.5.0",
-    "react-native-screens": "^3.20.0"
+    "react-native-screens": "^3.20.0",
+    "web3": "^1.8.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

@@ -5,7 +5,14 @@
  * @format
  */
 
+const nodelibs = require('node-libs-react-native');
+
+nodelibs.crypto = `${__dirname}/crypto.js`;
+
 module.exports = {
+  resolver: {
+    extraNodeModules: nodelibs,
+  },
   transformer: {
     getTransformOptions: async () => ({
       transform: {
